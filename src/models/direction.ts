@@ -52,6 +52,7 @@ module.exports = (sequelize: any, DataTypes: any) => {
   }, {
     sequelize,
     modelName: 'Direction',
+    timestamps: false
   });
   return Direction;
 };

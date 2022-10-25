@@ -9,4 +9,9 @@ const getAll = async (_req: Request, res: Response ) => {
 
 }
 
-export { getAll }
+const createUser = async (req: Request, res: Response) => {
+    const response = await usersServices.createUser(req.body)
+    res.send(response)
+}
+
+export { getAll, createUser}
