@@ -1,5 +1,5 @@
 interface RolAttributes {
-    id: number,
+    id?: number,
     name: string
 }
 

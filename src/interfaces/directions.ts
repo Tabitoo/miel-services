@@ -1,5 +1,5 @@
 interface DirectionsAttributes {
-    id: number,
+    id?: number,
     street: string,
     nro: number,
     codPostal: string,
@@ -7,4 +7,8 @@ interface DirectionsAttributes {
 
 } 
 
-export default DirectionsAttributes
+interface DirectionsBody extends DirectionsAttributes {
+    UsersId: number
+}
+
+export { DirectionsAttributes, DirectionsBody }

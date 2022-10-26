@@ -1,7 +1,12 @@
 interface PhoneAttributes {
-    id: number,
+    id?: number,
     number: number
 }
 
 
-export default PhoneAttributes
+interface PhoneBody extends PhoneAttributes {
+    UserId: number
+}
+
+
+export { PhoneAttributes, PhoneBody }

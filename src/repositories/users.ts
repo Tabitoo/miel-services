@@ -1,5 +1,7 @@
 import db from '../models'
-import UserAttributes from '../interfaces/users'
+import { UserInsertBody } from '../interfaces/users'
+import directions from './directions';
+import phones from './phones';
 
 const getAll = async (): Promise<any> => {
     try {
@@ -10,9 +12,9 @@ const getAll = async (): Promise<any> => {
     }
 } 
 
-const createUser = async (body: UserAttributes): Promise<any> => {
+const createUser = async (body: UserInsertBody): Promise<any> => {
     try {
-         return await db.User.create(body)
+         return await db.User.create(body, { include: [db.Phone, db.Province]})
     } catch (error) { 
         console.log('create user error', error)
     }

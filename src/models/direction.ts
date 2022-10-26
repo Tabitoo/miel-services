@@ -1,5 +1,5 @@
 'use strict';
-import DirectionsAttributes from '../interfaces/directions'
+import { DirectionsAttributes }  from '../interfaces/directions'
 
 import {
   Model

@@ -1,5 +1,9 @@
+import { PhoneAttributes} from './phone'
+import { DirectionsAttributes } from './directions'
+
+
 interface UserAttributes {
-    id: number,
+    id?: number,
     name: string,
     lastName: string,
     dni: number,
@@ -9,5 +13,23 @@ interface UserAttributes {
     password: string
 }
 
+interface UserRequestBody extends UserAttributes {
+    street: string,
+    nro: number,
+    codPostal: string,
+    localidad: string,
+    phoneNumber: number,
+    provinceId: number
+}
 
-export default UserAttributes 
+
+interface UserInsertBody extends UserAttributes {
+    rolId?: number
+    provinceId: number
+    phones: Array<PhoneAttributes>,
+    directions: Array<DirectionsAttributes>
+
+    
+}
+
+export { UserAttributes, UserInsertBody, UserRequestBody }

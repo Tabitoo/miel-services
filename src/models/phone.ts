@@ -1,7 +1,7 @@
 'use strict';
 
 
-import PhoneAttributes from '../interfaces/phone'
+import { PhoneAttributes }  from '../interfaces/phone'
 
 import {
   Model
